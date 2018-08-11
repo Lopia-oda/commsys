@@ -26,7 +26,7 @@
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">JAN：4902881419291</div>
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">期限：2018/10/01 12:00</div>
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">提案数量：1,000</div>
-                                    <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">残数量：<font color="red"><b>500</b></font></div>
+                                    <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">残数量：<font color="red"><b>550</b></font></div>
                                     <div class="col-12">メモメモメモメモメモメ モメモメモメモメモメモメモメモメモメモメモメモメモ</div>
                                 </div>
                             </td>
