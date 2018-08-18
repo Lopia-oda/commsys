@@ -65,23 +65,38 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
+        @if (Route::has('login'))
+            @auth
+                <div class="position-ref full-height">
+                    <div class="top-right links">
                         <a href="{{ url('/home') }}">ホーム</a>
-                    @else
+                    </div>
+                    <div class="text-left">
+                        <img src="lopita.jpg" class="img-rounded">
+                        お知らせ
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="flex-center position-ref">
+                                    ただいま重要なお知らせはございません
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @else
+                <div class="flex-center position-ref full-height">
+                    <div class="top-right links">
                         <a href="{{ route('login') }}">ログイン</a>
                         <!--<a href="{{ route('register') }}">Register</a>-->
-                    @endauth
+                    </div>
+                    <div class="content">
+                        <img src="logo.jpg" class="img-rounded"><br>
+                        LopiaCommunicationSystem
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Communication<br>System
-                </div>
-            </div>
-        </div>
+            @endauth
+        @endif
     </body>
 </html>

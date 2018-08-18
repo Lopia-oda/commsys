@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dicker_edit', 'DickereditController@index')->name('dicker_edit');
+Route::get('/detail', 'DetailController@index')->name('detail');
 

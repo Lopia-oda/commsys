@@ -1,14 +1,17 @@
 @extends('layouts.app')
+@include('layouts._script')
 
 @section('content')
     <div class="container">
         <div class="card">
             <div class="card-header">
                 <div class="float-left">
+<!--
                     <button type="button" class="btn btn-outline-secondary btn-sm">申請中</button>
                     <button type="button" class="btn btn-primary btn-sm">商談中</button>
                     <button type="button" class="btn btn-outline-secondary btn-sm">申請却下</button>
                     <button type="button" class="btn btn-outline-secondary btn-sm">商談終了</button>
+-->
                 </div>
                 <div class="float-right">
                     <a href="{{ route('dicker_edit') }}" type="button" class="btn btn-danger btn-sm">新規商談</a>
@@ -21,9 +24,9 @@
                     </div>
                 @endif
 
-                <table class="table table-hover table-responsive container">
+                <table class="table table-hover table-responsive table-clickable container">
                     @foreach ($dickers as $dicker)
-                        <tr>
+                        <tr data-href="{{ route('detail') }}">
                             <td>
                                 <div class="text-nowrap text-center"><b>商談中</b></div>
                                 <img src="no-image.jpg" class="img-rounded"><br>
