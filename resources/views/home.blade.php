@@ -14,7 +14,7 @@
 -->
                 </div>
                 <div class="float-right">
-                    <a href="{{ route('dicker_edit') }}" type="button" class="btn btn-danger btn-sm">新規商談</a>
+                    <a href="{{ route('edit') }}" type="button" class="btn btn-danger btn-sm">新規商談</a>
                 </div>
             </div>
             <div class="card-body">
@@ -24,12 +24,13 @@
                     </div>
                 @endif
 
-                <table class="table table-hover table-responsive table-clickable container">
+                <table class="table table-clickable table-hover table-responsive container">
                     @foreach ($dickers as $dicker)
-                        <tr data-href="{{ route('detail') }}">
+                        <tr>
                             <td>
                                 <div class="text-nowrap text-center"><b>商談中</b></div>
                                 <img src="no-image.jpg" class="img-rounded"><br>
+                                <a href="{{ route('detail') }}" type="button" class="btn btn-default btn-sm">詳細</a>
                             </td>
                             <td>
                                 <div class="row">
