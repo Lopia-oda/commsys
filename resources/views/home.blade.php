@@ -14,7 +14,7 @@
 -->
                 </div>
                 <div class="float-right">
-                    <a href="{{ route('edit') }}" type="button" class="btn btn-danger btn-sm">新規商談</a>
+                    <a href="/edit" type="button" class="btn btn-danger btn-sm">新規商談</a>
                 </div>
             </div>
             <div class="card-body">
@@ -30,7 +30,7 @@
                             <td>
                                 <div class="text-nowrap text-center"><b>商談中</b></div>
                                 <img src="no-image.jpg" class="img-rounded"><br>
-                                <a href="{{ route('detail') }}" type="button" class="btn btn-default btn-sm">詳細</a>
+                                <a href="/detail/{{$dicker->id}}" type="button" class="btn btn-default btn-sm">詳細</a>
                             </td>
                             <td>
                                 <div class="row">
