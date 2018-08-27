@@ -12,10 +12,12 @@ class Dicker extends Model
         'updated_at',
         'deleted_at',
     ];
-//    protected $casts = [
-//        'dicker_limit_at' => 'timestamp',
-//        'created_at' => 'timestamp',
-//        'updated_at' => 'timestamp',
-//        'deleted_at' => 'timestamp',
-//    ];
+
+    //protected $casts = [
+    //    'dicker_limit_at' => 'timestamp:Y-m-d H:i',
+    //];
+
+    //protected $dateFormat = [
+    //    'dicker_limit_at' => 'Y-m-d H:i',
+    //];
 }

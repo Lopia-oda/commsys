@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <div class="row">
                             <label class="col-sm-12 col-md-3">期限</label>
-                            <input type="text" id="dicker_limit_at" name="dicker_limit_at" class="form-control col-4" placeholder="2020/09/04 12:00" value="{{$dicker->dicker_limit_at}}">
+                            <input type="text" id="dicker_limit_at" name="dicker_limit_at" class="form-control col-4" placeholder="2020-09-04 12:00" value="{{$dicker->dicker_limit_at}}">
                         </div>
                     </div>
                     <div class="form-group">

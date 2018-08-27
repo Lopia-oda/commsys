@@ -37,10 +37,10 @@
                                     <div class="col-lg-12"><b>{{ $dicker->user_id }}</b></div>
                                     <div class="col-lg-12 text-primary"><b>{{ $dicker->trade_name }}</b></div>
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">JAN：{{ $dicker->jan_code }}</div>
-                                    <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">期限：{{ $dicker->dicker_limit_at->format('Y/m/d H:i') }}</div>
+                                    <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">期限：{{ $dicker->dicker_limit_at->format('Y-m-d H:i') }}</div>
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">提案数量：{{ $dicker->stock_quantity }}</div>
                                     <div class="col-xs-12 col-sm-6 col-lg-3" style="background-color:lemonchiffon;">残数量：<span style="color:red;"><b>{{ $dicker->remaining_quantity }}</b></span></div>
-                                    <div class="col-12">{{ $dicker->memo }}</div>
+                                    <div class="col-12" style="white-space:pre-wrap;">{{ $dicker->memo }}</div>
                                 </div>
                             </td>
                         </tr>

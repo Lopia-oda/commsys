@@ -28,7 +28,7 @@
                     <div class="form-group">
                         <div class="row">
                             <label class="col-sm-12 col-md-3">期限</label>
-                            <label name="dicker_limit_at" class="col-4">{{ $dicker->dicker_limit_at->format('Y/m/d H:i') }}</label>
+                            <label name="dicker_limit_at" class="col-4">{{ $dicker->dicker_limit_at->format('Y-m-d H:i') }}</label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -44,9 +44,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="row">
+                        <div class="row" style="white-space:pre-wrap;">
                             <label class="col-sm-12 col-md-3">メモ</label>
-                            <label name="memo" class="col-sm-12 col-md-9" rows="5">{{ $dicker->memo }}</label>
+                            <label name="memo" class="col-sm-12 col-md-9" rows="5"  >{{ $dicker->memo }}</label>
                         </div>
                     </div>
                     <div class="form-group">

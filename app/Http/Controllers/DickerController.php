@@ -53,7 +53,7 @@ class DickerController extends Controller
         $dicker->partner_cd = 1;
         $dicker->trade_name = $request->trade_name;
         $dicker->jan_code = $request->jan_code;
-        $dicker->dicker_limit_at = $request->dicker_limit_at;
+        $dicker->dicker_limit_at = ($request->dicker_limit_at).":00";
         $dicker->stock_quantity = $request->stock_quantity;
         $dicker->remaining_quantity = $request->stock_quantity;
         $dicker->memo = $request->memo;
@@ -78,7 +78,7 @@ class DickerController extends Controller
         $dicker = Dicker::findOrFail($id);
         $dicker->trade_name = $request->trade_name;
         $dicker->jan_code = $request->jan_code;
-        $dicker->dicker_limit_at = $request->dicker_limit_at;
+        $dicker->dicker_limit_at = ($request->dicker_limit_at).':00';
         $dicker->stock_quantity = $request->stock_quantity;
         $dicker->memo = $request->memo;
         $dicker->save();
