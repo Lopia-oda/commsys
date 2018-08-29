@@ -25,8 +25,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="lopita.jpg" class="img-rounded">
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    @section('icon')
+                        <img src="img/system/lopita.jpg" class="img-rounded">
+                    @show
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

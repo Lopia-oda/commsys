@@ -27,10 +27,12 @@
                 <table class="table table-clickable table-hover table-responsive container">
                     @foreach ($dickers as $dicker)
                         <tr>
+                            <div>
+                            <a href="/dickers/{{$dicker->id}}">
                             <td>
                                 <div class="text-nowrap text-center"><b>商談中</b></div>
-                                <img src="no-image.jpg" class="img-rounded"><br>
-                                <a href="/dickers/{{$dicker->id}}" class="btn btn-default btn-sm">詳細</a>
+                                <img src="img/system/no-image.jpg" class="img-rounded"><br>
+                                <a href="/dickers/{{$dicker->id}}" class="btn btn-primary btn-sm btn-block">詳細</a>
                             </td>
                             <td>
                                 <div class="row">
@@ -43,6 +45,8 @@
                                     <div class="col-12" style="white-space:pre-wrap;">{{ $dicker->memo }}</div>
                                 </div>
                             </td>
+                            </a>
+                            </div>
                         </tr>
                     @endforeach
                 </table>

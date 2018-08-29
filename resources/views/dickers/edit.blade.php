@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    @section('icon')
+        <img src="../../img/system/lopita.jpg" class="img-rounded">
+    @endsection
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -25,7 +28,7 @@
                     <div class="form-group">
                         <div class="row">
                             <label class="col-sm-12 col-md-3">期限</label>
-                            <input type="text" id="dicker_limit_at" name="dicker_limit_at" class="form-control col-4" placeholder="2020-09-04 12:00" value="{{$dicker->dicker_limit_at}}">
+                            <input type="text" id="dicker_limit_at" name="dicker_limit_at" class="form-control col-4" placeholder="2020-09-04 12:00" value="{{$dicker->dicker_limit_at->format('Y-m-d H:i')}}">
                         </div>
                     </div>
                     <div class="form-group">

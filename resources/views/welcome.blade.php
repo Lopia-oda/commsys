@@ -72,7 +72,7 @@
                         <a href="{{ url('/home') }}">ホーム</a>
                     </div>
                     <div class="text-left">
-                        <img src="lopita.jpg" class="img-rounded">
+                        <img src="img/system/lopita.jpg" class="img-rounded">
                         お知らせ
                     </div>
                     <div class="content">
@@ -92,7 +92,7 @@
                         <!--<a href="{{ route('register') }}">Register</a>-->
                     </div>
                     <div class="content">
-                        <img src="logo.jpg" class="img-rounded"><br>
+                        <img src="img/system/logo.jpg" class="img-rounded"><br>
                         LopiaCommunicationSystem
                     </div>
                 </div>

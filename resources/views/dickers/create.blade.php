@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    @section('icon')
+        <img src="../img/system/lopita.jpg" class="img-rounded">
+    @endsection
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -13,8 +16,36 @@
                     </div>
                 @endif
 
-                <form action="/dickers" method="post">
+                <form action="/dickers" method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-sm-3">送信先</label>
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#destSelectModal">送信先選択</button>
+                            <div class="modal fade" id="destSelectModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+                                <!-- 送信先ダイアログ ここから -->
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="destSelectModal">送信先指定</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            食品部<br>
+                                            鮮魚部<br>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">キャンセル</button>
+                                            <button type="button" class="btn btn-primary btn-sm">決定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 送信先ダイアログ ここまで -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <div class="row">
                             <label class="col-sm-12 col-md-3">商品名・タイトル</label>
@@ -47,15 +78,9 @@
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <div class="input-group">
-                                <label class="col-sm-12 col-md-3">画像</label>
-                                <label class="input-group-btn">
-                                    <span class="btn btn-primary col-md-12">
-                                        ファイル選択<input type="file" style="display:none">
-                                    </span>
-                                </label>
-                                <input type="text" class="form-control col-12" readonly="">
-                            </div>
+                            <label class="col-sm-12 col-md-3">画像</label>
+                            <input type="file" name="image" class="col-md-9 form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" placeholder="ファイル">
+                            <!-- 画像ファイルアップロード -->
                         </div>
                     </div>
                     <div class="float-right">

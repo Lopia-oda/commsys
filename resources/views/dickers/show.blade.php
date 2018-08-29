@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    @section('icon')
+        <img src="../img/system/lopita.jpg" class="img-rounded">
+    @endsection
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -52,7 +55,7 @@
                     <div class="form-group">
                         <div class="row">
                             <label class="col-sm-12 col-md-3">画像</label>
-                            <img src="no-image.jpg" class="img-rounded">
+                            <img src="../img/system/no-image.jpg" class="img-rounded">
                         </div>
                     </div>
 

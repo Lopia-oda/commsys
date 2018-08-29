@@ -47,7 +47,9 @@ class DickerController extends Controller
      * 新規登録処理
      */
     public function store(Request $request) {
-        Log::debug('store-start');
+
+        $path = "app/".$request->file('image')->store('public/images');
+
         $dicker = new Dicker;
         $dicker->user_id = 1;
         $dicker->partner_cd = 1;
@@ -57,6 +59,20 @@ class DickerController extends Controller
         $dicker->stock_quantity = $request->stock_quantity;
         $dicker->remaining_quantity = $request->stock_quantity;
         $dicker->memo = $request->memo;
+
+        $dicker->dicker_status = $request->dicker_status;
+        $dicker->image_filepath = basename($path);
+        $dicker->image_filename1 = basename($path);
+//        $dicker->image_filename2 = basename($path);
+//        $dicker->image_filename3 = basename($path);
+//        $dicker->image_filename4 = basename($path);
+//        $dicker->image_filename5 = basename($path);
+//        $dicker->image_filename6 = basename($path);
+//        $dicker->image_filename7 = basename($path);
+//        $dicker->image_filename8 = basename($path);
+//        $dicker->image_filename9 = basename($path);
+//        $dicker->image_filename10 = basename($path);
+
         $dicker->save();
 
         return redirect('dickers/'.$dicker->id);
